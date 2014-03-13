@@ -1,44 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="jNv-eZ-Njf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - PageControl-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="i1z-3Y-cbH">
-                                <rect key="frame" x="134" y="411" width="53" height="37"/>
+                                <rect key="frame" x="134" y="394" width="53" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.85094684099999995" green="0.070050164380000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.039215687659999998" green="0.2588235438" blue="0.45882356169999999" alpha="1" colorSpace="deviceRGB"/>
                             </pageControl>
                             <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="YdW-8w-QKe">
-                                <rect key="frame" x="0.0" y="20" width="320" height="389"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="339"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adidas.png" id="4HW-B0-IZA">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="332"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ferrari-negro.jpg" id="EDx-EC-JxK">
-                                        <rect key="frame" x="320" y="0.0" width="320" height="408"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t2ec16rhjgsffmnfqs5obrie9fbmfq60_12.jpg" id="i3E-jF-js3">
-                                        <rect key="frame" x="480" y="0.0" width="320" height="408"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adidas.png" id="OkO-qr-yef">
-                                        <rect key="frame" x="640" y="0.0" width="320" height="408"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="RHx-Hw-rOq"/>
                                 </connections>
@@ -47,24 +29,102 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="PageControl" id="WoR-eH-jam"/>
+                    <navigationItem key="navigationItem" id="8Ys-9k-AKo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="img1" destination="EDx-EC-JxK" id="sEq-jG-7ji"/>
-                        <outlet property="img2" destination="i3E-jF-js3" id="p9U-2n-Rtu"/>
-                        <outlet property="img3" destination="OkO-qr-yef" id="x7m-Rd-Ipz"/>
                         <outlet property="page" destination="i1z-3Y-cbH" id="piu-8k-e13"/>
                         <outlet property="scroll" destination="YdW-8w-QKe" id="UfF-a5-3mx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="390" y="649"/>
+        </scene>
+        <!--Table Controller - TableView-->
+        <scene sceneID="IZh-4C-c1F">
+            <objects>
+                <viewController id="xZx-As-1vc" customClass="TableController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CsW-IL-aWu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VM5-eO-1PU">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xZx-As-1vc" id="le8-5t-yx2"/>
+                                    <outlet property="delegate" destination="xZx-As-1vc" id="tRE-e7-pCQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="TableView" id="DMP-9f-L7N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFB-N7-jMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="-683"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8bV-YD-Xde">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="jNv-eZ-Njf" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2nS-u8-VHy">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xZx-As-1vc" kind="relationship" relationship="viewControllers" id="d3M-aE-mLx"/>
+                        <segue destination="Kgf-pW-f88" kind="relationship" relationship="viewControllers" id="X6c-Dh-vhv"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="3y3-js-RNv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EB8-d0-EZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="-30"/>
+        </scene>
+        <!--Picker Controller - Picker-->
+        <scene sceneID="7hH-4n-4ZO">
+            <objects>
+                <viewController id="Kgf-pW-f88" customClass="PickerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Enw-v2-cbG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="Hwf-1g-vyl">
+                                <rect key="frame" x="0.0" y="42" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kgf-pW-f88" id="Fve-uI-VXz"/>
+                                    <outlet property="delegate" destination="Kgf-pW-f88" id="4hm-cu-Zhk"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgN-R5-0XB">
+                                <rect key="frame" x="97" y="273" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Picker" id="Egv-ha-m0D"/>
+                    <connections>
+                        <outlet property="label" destination="bgN-R5-0XB" id="LhE-5I-K0m"/>
+                        <outlet property="picker" destination="Hwf-1g-vyl" id="Y4a-vK-aTQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5J-7R-nsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="-20"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="adidas.png" width="800" height="600"/>
-        <image name="ferrari-negro.jpg" width="284" height="177"/>
-        <image name="t2ec16rhjgsffmnfqs5obrie9fbmfq60_12.jpg" width="490" height="490"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

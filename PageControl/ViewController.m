@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    NSMutableArray *iArray;
+    NSMutableArray *names;
+}
 
 @end
 
@@ -18,8 +21,26 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    iArray=[[NSMutableArray alloc]initWithObjects:@"ferrari-negro.jpg",@"adidas.png", nil];
+    names = [[NSMutableArray alloc]initWithObjects:@"Ferrari",@"Adidas", nil];
     
-    self.scroll.contentSize =CGSizeMake(self.scroll.frame.size.width * 3, self.scroll.frame.size.height);
+    for(int i=0;i<[iArray count]; i++){
+        CGRect frame;
+        frame.origin.x = self.scroll.frame.size.width * i;
+        frame.origin.y = 0;
+        frame.size = self.scroll.frame.size;
+        
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
+        imageView.image = [UIImage imageNamed:[iArray objectAtIndex:i]];
+        [self.scroll addSubview:imageView];
+        
+        UILabel *label =[[UILabel alloc]initWithFrame:frame];
+        label.text=[NSString stringWithFormat:@"%@",names[i]];
+        label.textColor =[UIColor redColor];
+        [self.scroll addSubview:label];
+        
+    }
+    self.scroll.contentSize =CGSizeMake(self.scroll.frame.size.width * [iArray count], self.scroll.frame.size.height);
     
     
 }
