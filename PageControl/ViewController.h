@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIScrollViewDelegate>{
+    
+}
+
+@property (weak,nonatomic)IBOutlet UIPageControl *page;
+@property (weak,nonatomic)IBOutlet UIScrollView *scroll;
+@property(weak,nonatomic)IBOutlet UIImageView *img1;
+@property(weak,nonatomic)IBOutlet UIImage *img2;
+@property(weak,nonatomic)IBOutlet UIImage *img3;
+
 
 @end
